@@ -11,3 +11,7 @@ export interface Account {
 	system_account: string;
 	total_value: number;
 }
+
+export interface GeneralLedger {
+	data: Account[];
+}
