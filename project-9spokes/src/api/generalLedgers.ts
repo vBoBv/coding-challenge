@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
-import { Account } from '../state/interfaces/accounts';
+import { GeneralLedger } from '../state/interfaces/generalLedger';
 
 const ledgers = axios.create({
 	baseURL: 'https://raw.githubusercontent.com/vBoBv/coding-challenge/master/'
@@ -14,5 +14,5 @@ const requests = {
 };
 
 export const Ledgers = {
-	getGeneralLedger: () => requests.get<Account[]>(accountData)
+	getGeneralLedger: () => requests.get<GeneralLedger>(accountData)
 };
