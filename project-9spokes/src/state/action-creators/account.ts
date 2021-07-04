@@ -16,7 +16,7 @@ export const getAccountsData = () => {
 			});
 		} catch (err) {
 			dispatch({
-				type: AccountActionType.GET_ACCOUNT_SUCCESS,
+				type: AccountActionType.GET_ACCOUNT_ERROR,
 				payload: err.message
 			});
 		}
