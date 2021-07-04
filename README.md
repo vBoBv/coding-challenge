@@ -7,7 +7,7 @@
 - Install all the dependencies: `npm install`
 - Start the application: `npm start`
 
-## Run Unit Tests
+## Run Unit Tests with Jest (Built-In Testing Framework)
 
 - In the terminal, run: `npm test`
 
