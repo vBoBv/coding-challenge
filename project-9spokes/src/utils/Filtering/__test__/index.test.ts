@@ -3,8 +3,8 @@ import { filterAccountType } from '../filterAccountType';
 import { filterValueType } from '../filterValueType';
 import { mockData } from '../../../data/mockData';
 
-it('filters the account by account category', () => {
-	const output = [
+it('filters the accounts by account category', () => {
+	const expectedOutput = [
 		{
 			account_category: 'revenue',
 			account_code: '200',
@@ -20,11 +20,11 @@ it('filters the account by account category', () => {
 		}
 	];
 
-	expect(filterAccountCategory(mockData, 'revenue')).toEqual(output);
+	expect(filterAccountCategory(mockData, 'revenue')).toEqual(expectedOutput);
 });
 
-it('filters the account by value type', () => {
-	const output = [
+it('filters the accounts by value type', () => {
+	const expectedOutput = [
 		{
 			account_type_bank: '',
 			value_type: 'debit',
@@ -53,11 +53,11 @@ it('filters the account by value type', () => {
 		}
 	];
 
-	expect(filterValueType(mockData, 'debit')).toEqual(output);
+	expect(filterValueType(mockData, 'debit')).toEqual(expectedOutput);
 });
 
-it('filters the account by account type', () => {
-	const output = [
+it('filters the accounts by account type', () => {
+	const expectedOutput = [
 		{
 			account_category: 'revenue',
 			account_code: '200',
@@ -73,5 +73,5 @@ it('filters the account by account type', () => {
 		}
 	];
 
-	expect(filterAccountType(mockData, ['sales'])).toEqual(output);
+	expect(filterAccountType(mockData, ['sales'])).toEqual(expectedOutput);
 });
